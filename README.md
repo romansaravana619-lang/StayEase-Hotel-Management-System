@@ -88,13 +88,13 @@ This project was developed as a full-stack web application to strengthen backend
 
 ## 📅 Booking Page
 
-![Booking](screenshots/BookingPng.png)
+![Booking](screenshots/BookingPage.png)
 
 ---
 
 ## 📖 Booking History
 
-![Booking History](screenshots/BookingHistory.png)
+![Booking History](screenshots/BookingsHistory.png)
 
 ---
 
@@ -107,3 +107,162 @@ This project was developed as a full-stack web application to strengthen backend
 ## 🧾 Billing History
 
 ![Billing History](screenshots/BillingHistoryPage.png)
+# 📂 Project Structure
+
+```
+StayEase-Hotel-Management-System
+│
+├── bills/
+├── docs/
+├── screenshots/
+├── static/
+│   ├── css/
+│   ├── images/
+│   └── js/
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── booking.html
+│   ├── bookings.html
+│   ├── rooms.html
+│   ├── billing.html
+│   ├── billing_history.html
+│   └── ...
+│
+├── app.py
+├── database.py
+├── requirements.txt
+├── stayease.db
+└── README.md
+```
+# ⚙️ Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/romansaravana619-lang/StayEase-Hotel-Management-System.git
+```
+
+## Move into the Project
+
+```bash
+cd StayEase-Hotel-Management-System
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Run the Application
+
+```bash
+python app.py
+```
+
+Open your browser:
+
+```
+http://127.0.0.1:5000
+```
+# 📋 Modules
+
+✔ Home Page
+
+✔ Login System
+
+✔ Dashboard
+
+✔ Room Management
+
+✔ Room Booking
+
+✔ Billing
+
+✔ Invoice Generation
+
+✔ Booking History
+
+✔ Billing History
+# 🗄 Database
+
+Database Used:
+
+- SQLite
+
+Main Database File:
+
+```
+stayease.db
+```
+
+The database stores:
+
+- Customer Details
+
+- Room Information
+
+- Booking Records
+
+- Billing Details
+
+- Payment History
+
+# 🚀 Future Improvements
+
+- 🌐 Online Room Booking
+- 💳 Payment Gateway Integration
+- 📧 Email Notifications
+- 📱 Mobile Responsive Dashboard
+- 👤 Customer Portal
+- 📊 Analytics Dashboard
+- ☁ Cloud Database Support
+- 🔐 Role-Based Authentication
+- 📅 Check-In / Check-Out Management
+
+# 👨‍💻 Developer
+
+**Saravana Kumar M**
+
+🎓 Electrical & Electronics Engineering Student
+
+💻 Python | Flask | SQLite | HTML | CSS
+
+📍 Coimbatore, Tamil Nadu, India
+
+📧 romansaravana619@gmail.com
+
+🔗 LinkedIn
+
+https://www.linkedin.com/in/saravanakumar1225/
+
+# ⭐ Support
+
+If you found this project useful,
+
+⭐ Star this repository
+
+🍴 Fork the project
+
+💬 Share your feedback
+
+Every contribution and suggestion is appreciated.
+
+# 📜 License
+
+This project is developed for educational and portfolio purposes.
+
+Feel free to explore, learn, and improve upon it.
+
+---
+
+<p align="center">
+
+Made with ❤️ by <b>Saravana Kumar M</b>
+
+Learning • Building • Improving 🚀
+
+</p>
