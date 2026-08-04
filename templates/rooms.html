@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}
+Room Management
+{% endblock %}
+
+{% block content %}
+
+<h1>Room Management</h1>
+
+<form method="POST">
+
+<div class="row">
+
+<div class="input-box">
+<label>Room Number</label>
+<input type="text" name="room_number" required>
+</div>
+
+<div class="input-box">
+<label>Room Type</label>
+
+<select name="room_type" required>
+
+<option>Single</option>
+<option>Double</option>
+<option>Deluxe</option>
+<option>Suite</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+<label>Price (₹)</label>
+<input type="number" name="price" required>
+</div>
+
+</div>
+
+<button type="submit">
+Add Room
+</button>
+
+</form>
+
+<br>
+
+<table class="booking-table">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Room No</th>
+<th>Type</th>
+<th>Price</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for room in rooms %}
+
+<tr>
+
+<td>{{ room.id }}</td>
+<td>{{ room.room_number }}</td>
+<td>{{ room.room_type }}</td>
+<td>₹{{ room.price }}</td>
+<td>{{ room.status }}</td>
+<td>
+
+<a href="/edit_room/{{ room.id }}">✏️ Edit</a>
+
+|
+
+<a href="/delete_room/{{ room.id }}"
+onclick="return confirm('Delete this room?')">
+
+🗑️ Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}  

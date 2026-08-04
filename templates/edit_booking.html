@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Booking
+{% endblock %}
+
+{% block content %}
+
+<h1>Edit Booking</h1>
+
+<form method="POST">
+
+<div class="row">
+
+<div class="input-box">
+<label>Customer Name</label>
+<input type="text" name="customer_name"
+value="{{ booking.customer_name }}" required>
+</div>
+
+<div class="input-box">
+<label>Phone Number</label>
+<input type="text" name="phone"
+value="{{ booking.phone }}" required>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+<label>Email</label>
+<input type="email" name="email"
+value="{{ booking.email }}" required>
+</div>
+
+<div class="input-box">
+<label>Aadhar Number</label>
+<input type="text" name="aadhar"
+value="{{ booking.aadhar }}" required>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+<label>Check In</label>
+<input type="date" name="checkin"
+value="{{ booking.checkin }}" required>
+</div>
+
+<div class="input-box">
+<label>Check Out</label>
+<input type="date" name="checkout"
+value="{{ booking.checkout }}" required>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+<label>Room Type</label>
+
+<select name="room_type" required>
+
+<option value="Single"
+{% if booking.room_type=="Single" %}selected{% endif %}>
+Single
+</option>
+
+<option value="Double"
+{% if booking.room_type=="Double" %}selected{% endif %}>
+Double
+</option>
+
+<option value="Deluxe"
+{% if booking.room_type=="Deluxe" %}selected{% endif %}>
+Deluxe
+</option>
+
+<option value="Suite"
+{% if booking.room_type=="Suite" %}selected{% endif %}>
+Suite
+</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+<label>Guests</label>
+<input type="number" name="guests"
+value="{{ booking.guests }}" required>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box full">
+<label>Address</label>
+
+<textarea name="address" rows="4" required>{{ booking.address }}</textarea>
+
+</div>
+
+</div>
+
+<button type="submit">
+
+Update Booking
+
+</button>
+
+</form>
+
+{% endblock %}

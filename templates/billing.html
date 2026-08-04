@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Billing
+{% endblock %}
+
+{% block content %}
+
+<h1>Billing</h1>
+
+<table class="booking-table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Room No</th>
+            <th>Room Type</th>
+            <th>Generate Bill</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+
+    {% for booking in bookings %}
+
+        <tr>
+
+            <td>{{ booking.id }}</td>
+            <td>{{ booking.customer_name }}</td>
+            <td>{{ booking.room_number }}</td>
+            <td>{{ booking.room_type }}</td>
+            <td>
+    <a href="/generate_bill/{{ booking.id }}">
+        💳 Generate Bill
+    </a>
+</td>
+
+    
+
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Billing History</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            margin:30px;
+        }
+
+        h2{
+            text-align:center;
+            color:#333;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+        }
+
+        tr:nth-child(even){
+            background:#f9f9f9;
+        }
+
+        tr:hover{
+            background:#ececec;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>Billing History</h2>
+
+<table>
+
+<tr>
+    <th>Bill ID</th>
+    <th>Customer</th>
+    <th>Room</th>
+    <th>Room Type</th>
+    <th>Price</th>
+    <th>Days</th>
+    <th>Total</th>
+    <th>Bill Date</th>
+</tr>
+
+{% for bill in bills %}
+
+<tr>
+
+<td>{{ bill.id }}</td>
+<td>{{ bill.customer_name }}</td>
+<td>{{ bill.room_number }}</td>
+<td>{{ bill.room_type }}</td>
+<td>Rs. {{ bill.price }}</td>
+<td>{{ bill.days }}</td>
+<td>Rs. {{ bill.total }}</td>
+<td>{{ bill.bill_date }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

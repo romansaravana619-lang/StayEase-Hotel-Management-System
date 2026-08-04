@@ -1,0 +1,12 @@
+=================================
+        StayEase Hotel
+=================================
+
+Invoice No : 20260727001149
+Customer   : sara
+Room No    : 101
+Check In   : 2026-07-25
+Check Out  : 2026-07-27
+Amount     : Rs.1500.0
+
+Thank You For Staying With Us.

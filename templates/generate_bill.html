@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}
+Generate Bill
+{% endblock %}
+
+{% block content %}
+
+<h1>Generate Bill</h1>
+
+<table class="booking-table">
+<h3>Invoice No : {{ invoice }}</h3>
+
+<tr>
+    <th>Customer</th>
+    <td>{{ booking.customer_name }}</td>
+</tr>
+
+<tr>
+    <th>Room Number</th>
+    <td>{{ booking.room_number }}</td>
+</tr>
+
+<tr>
+    <th>Room Type</th>
+    <td>{{ booking.room_type }}</td>
+</tr>
+
+<tr>
+    <th>Price Per Day</th>
+    <td>₹{{ price }}</td>
+</tr>
+
+</table>
+
+<br>
+
+<form method="POST" action="{{ url_for('checkout', id=booking.id) }}">
+
+<label>Number of Days</label>
+
+<input
+type="number"
+id="days"
+name="days"
+value="1"
+min="1"
+oninput="calculateBill()">
+
+<br><br>
+
+<h2>
+
+Total :
+₹<span id="total">{{ price }}</span>
+
+</h2>
+<br><br>
+
+<button
+type="submit"
+class="checkout-btn"
+onclick="return confirm('Checkout this customer?')">
+
+🚪 Checkout
+
+</button>
+
+</form>
+
+<script>
+
+const price = Number("{{ price }}");
+
+function calculateBill(){
+let days=document.getElementById("days").value;
+
+document.getElementById("total").innerHTML=price*days;
+
+}
+
+</script>
+<br><br>
+
+<a href="{{ url_for('billing') }}" class="checkout-btn">
+    ⬅ Back to Billing
+</a>
+{% endblock %}

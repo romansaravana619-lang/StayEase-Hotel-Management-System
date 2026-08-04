@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<h1>Welcome, Admin 👋</h1>
+
+<p>Hotel Management Dashboard</p>
+
+<div class="cards">
+
+    <div class="card">
+        <h2>{{ total_rooms }}</h2>
+        <p>Total Rooms</p>
+    </div>
+
+    <div class="card">
+        <h2>{{ available_rooms }}</h2>
+        <p>Available Rooms</p>
+    </div>
+
+    <div class="card">
+        <h2>{{ occupied_rooms }}</h2>
+        <p>Booked Rooms</p>
+    </div>
+
+    <div class="card">
+        <h2>{{ total_bookings }}</h2>
+        <p>Total Bookings</p>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StayEase | Home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🏨 StayEase
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/rooms">Rooms</a></li>
+
+            <li><a href="/#services">Services</a></li>
+
+            <li><a href="/#about">About</a></li>
+
+            <li><a href="/#contact">Contact</a></li>
+
+            <li>
+                <a class="login-btn" href="/login">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="overlay">
+
+            <h1>
+                Experience Luxury & Comfort
+            </h1>
+
+            <p>
+
+                Book your dream stay with StayEase Hotel Booking System.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="/booking" class="btn-primary">
+
+                    Book Now
+
+                </a>
+
+                <a href="/rooms" class="btn-secondary">
+
+                    Explore Rooms
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About Section -->
+
+<section id="about" class="about">
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <h2>About StayEase</h2>
+
+            <p>
+                StayEase Hotel Booking System is a modern hotel management
+                platform developed using Python and Flask. It allows customers
+                to explore rooms, make bookings, and manage reservations with
+                a simple and user-friendly interface.
+            </p>
+
+            <p>
+                Our goal is to provide a fast, secure, and comfortable booking
+                experience while helping hotel administrators efficiently
+                manage rooms and customer details.
+            </p>
+
+            <a href="/booking" class="about-btn">
+                Book Your Stay
+            </a>
+
+        </div>
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=900&auto=format&fit=crop"
+                 alt="Luxury Hotel">
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Featured Rooms -->
+
+<section class="rooms-section">
+
+    <h2 class="section-title">Featured Rooms</h2>
+
+    <div class="room-container">
+
+        <div class="room-card">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=900&auto=format&fit=crop" alt="Deluxe Room">
+
+            <div class="room-content">
+                <h3>Double Room</h3>
+                <p>Comfortable room with modern interiors and premium facilities.</p>
+                <h4>₹3000 / Night</h4>
+                <a href="/booking" class="room-btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="room-card">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=900&auto=format&fit=crop" alt="Executive Suite">
+
+            <div class="room-content">
+                <h3>Suite Room</h3>
+                <p>Luxury suite with spacious living area and city view.</p>
+                <h4>₹5000 / Night</h4>
+                <a href="/booking" class="room-btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="room-card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=900&auto=format&fit=crop" alt="Presidential Suite">
+
+            <div class="room-content">
+                <h3>Deluxe Room</h3>
+                <p>Experience premium luxury with exclusive hotel services.</p>
+                <h4>₹8000 / Night</h4>
+                <a href="/booking" class="room-btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- Hotel Services -->
+
+<section id="services" class="services">
+
+    <h2 class="section-title">Our Premium Services</h2>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <div class="service-icon">🛎️</div>
+            <h3>24/7 Room Service</h3>
+            <p>Enjoy round-the-clock room service with delicious meals and quick assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🏊</div>
+            <h3>Swimming Pool</h3>
+            <p>Relax and refresh yourself in our luxury swimming pool.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🍽️</div>
+            <h3>Restaurant</h3>
+            <p>Experience premium dining with our multi-cuisine restaurant.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💪</div>
+            <h3>Fitness Center</h3>
+            <p>Stay healthy with our fully equipped modern gym.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📶</div>
+            <h3>Free Wi-Fi</h3>
+            <p>Unlimited high-speed internet access throughout the hotel.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🚖</div>
+            <h3>Airport Pickup</h3>
+            <p>Convenient airport pickup and drop services for all guests.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- Testimonials -->
+
+<section class="testimonials">
+
+    <h2 class="section-title">What Our Guests Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                "Amazing experience! The rooms were clean, luxurious, and the staff
+                were very friendly. I would definitely recommend StayEase."
+            </p>
+
+            <h4>— Rahul Sharma</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                "Excellent booking system and quick check-in process. Everything
+                was smooth and professional."
+            </p>
+
+            <h4>— Priya Nair</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>
+                "Beautiful ambience, premium facilities, and outstanding customer
+                service. Truly worth every moment."
+            </p>
+
+            <h4>— Arjun Kumar</h4>
+        </div>
+
+    </div>
+
+</section>
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-box">
+
+        <p>📍 Coimbatore, Tamil Nadu</p>
+
+        <p>📞 +91 98765 43210</p>
+
+        <p>✉️ info@stayease.com</p>
+
+        <p>🌐 www.stayease.com</p>
+
+    </div>
+
+</section>
+<footer>
+
+    <p>
+
+        © 2026 StayEase Hotel Booking System |
+        Developed by Saravana Kumar, Kavipriyan & Sneha
+
+    </p>
+
+</footer>
+</body>
+
+</html>

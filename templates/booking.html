@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}
+Book Room
+{% endblock %}
+
+{% block content %}
+
+<h1>Room Booking</h1>
+
+<form method="POST" action="/booking">
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Customer Name</label>
+
+<input type="text"
+name="customer_name"
+placeholder="Enter customer name"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Phone Number</label>
+
+<input type="text"
+name="phone"
+placeholder="Enter phone number"
+required>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Email</label>
+
+<input type="email"
+name="email"
+placeholder="Enter email"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Aadhar Number</label>
+
+<input type="text"
+name="aadhar"
+placeholder="Enter Aadhar Number"
+required>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Check In</label>
+
+<input type="date"
+name="checkin"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Check Out</label>
+
+<input type="date"
+name="checkout"
+required>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>Room Number</label>
+
+<select name="room_number" required>
+
+<option value="">-- Select Room --</option>
+
+{% for room in available_rooms %}
+
+<option value="{{ room.room_number }}">
+    {{ room.room_number }}
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>Guests</label>
+
+<input type="number"
+name="guests"
+min="1"
+required>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box full">
+
+<label>Address</label>
+
+<textarea
+name="address"
+rows="4"
+required></textarea>
+
+</div>
+
+</div>
+
+<button type="submit">
+
+Book Room
+
+</button>
+
+</form>
+
+{% endblock %}

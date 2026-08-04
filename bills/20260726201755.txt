@@ -1,0 +1,9 @@
+=================================
+        StayEase Hotel
+=================================
+
+Invoice No : 20260726201755
+Customer   : saravana
+Room No    : 102
+Check In   : 2026-07-26
+Check Out  : 2026-07-27

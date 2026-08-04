@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StayEase | Login</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>🏨 StayEase</h1>
+
+            <h2>Login</h2>
+
+            <form action="/login" method="POST">
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter Username"
+                    required>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required>
+
+                <button type="submit">
+                    Login
+                </button>
+                {% if error %}
+                <p class="error">{{ error }}</p>
+                {% endif %}
+
+            </form>
+
+            <a href="/">← Back to Home</a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
