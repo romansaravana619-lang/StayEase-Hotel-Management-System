@@ -226,3 +226,246 @@ button[type="submit"]:hover{
     font-weight: bold;
     font-size: 16px;
 }
+
+/* =========================================================
+   StayEase - Complete Mobile Responsive Layout
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .dashboard {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    /* ---------- Mobile Sidebar ---------- */
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 18px 12px;
+        overflow: visible;
+    }
+
+    .sidebar h2 {
+        margin: 0 0 15px;
+        font-size: 24px;
+    }
+
+    .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        margin: 0;
+    }
+
+    .sidebar ul li a {
+        width: 100%;
+        padding: 10px 5px;
+        font-size: 14px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* ---------- Main Content ---------- */
+
+    .main-content {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        padding: 20px 14px 40px;
+        overflow-x: hidden;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+        line-height: 1.25;
+        word-break: break-word;
+    }
+
+    .main-content p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* ---------- Dashboard Cards ---------- */
+
+    .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        padding: 22px 15px;
+    }
+
+    .card h2 {
+        font-size: 32px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    /* ---------- Forms ---------- */
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .input-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .input-box input,
+    .input-box select,
+    .input-box textarea,
+    input,
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .input-box textarea,
+    textarea {
+        resize: vertical;
+    }
+
+    button,
+    button[type="submit"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+    }
+
+    /* ---------- Tables ---------- */
+
+    .booking-table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    .booking-table table {
+        width: 100%;
+    }
+
+    .booking-table th,
+    .booking-table td {
+        padding: 10px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* ---------- Flash Messages ---------- */
+
+    .flash-message {
+        margin: 10px 0 15px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    /* ---------- Generate Bill ---------- */
+
+    .checkout-btn {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   Small Phones
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        padding: 15px 10px;
+    }
+
+    .sidebar h2 {
+        font-size: 22px;
+    }
+
+    .sidebar ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .sidebar ul li a {
+        font-size: 13px;
+        padding: 9px 4px;
+    }
+
+    .main-content {
+        padding: 18px 10px 35px;
+    }
+
+    .main-content h1 {
+        font-size: 25px;
+    }
+
+    form {
+        padding: 18px 12px;
+    }
+
+    .card {
+        padding: 20px 12px;
+    }
+
+    .booking-table th,
+    .booking-table td {
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+
+}
